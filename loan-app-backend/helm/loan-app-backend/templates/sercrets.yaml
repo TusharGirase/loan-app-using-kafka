@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "loan-app-backend.fullname" . }}
+  labels:
+    {{- include "loan-app-backend.labels" . | nindent 8 }}
+   {{- with .Values.podLabels }}
+   {{- toYaml . | nindent 8 }}
+   {{- end }}
+data:
+  loan_app_someprop: "value from secret"  # Replace "some_value" with the desired value
