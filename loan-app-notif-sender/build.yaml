@@ -1,3 +1,2 @@
 image:
-  name: loan-app-notif-sender
-  location: localhost:8086/repository/docker-release/org/abcl/
+  location: org/abcl/loan-app-notif-sender
