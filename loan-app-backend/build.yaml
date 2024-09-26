@@ -1,0 +1,3 @@
+image:
+  name: loan-app-backend
+  location: localhost:8086/repository/docker-release/org/abcl/

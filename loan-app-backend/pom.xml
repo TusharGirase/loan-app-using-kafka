@@ -80,6 +80,30 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>2.5.0</version>
+
+                <configuration>
+                    <from>
+                        <image>localhost:8086/repository/docker-release/devops/jdk:17-jdk-alpine</image>
+                    </from>
+                    <containerizingMode>packaged</containerizingMode>
+                    <container>
+                        <mainClass>org.example.messageproducer.MessageProducerApplication</mainClass>
+                    </container>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
